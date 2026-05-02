@@ -1,12 +1,10 @@
-🇺🇸 [English](README.md) | 🇰🇷 [한국어](README.ko.md) | 🇯🇵 [日本語](README.ja.md) | 🇨🇳 [中文](README.zh.md)
-
 # Medical Academic Paper Writing Workflow for Claude
 
 A structured workflow system for academic medical paper writing using Claude AI.
 
 ## Version
 
-**v0.6.0** (2026-04-18)
+**v0.7.0** (2026-05-02)
 
 ---
 
@@ -203,6 +201,25 @@ Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
 ---
 
 ## Changelog
+
+### v0.7.0 (2026-05-02)
+
+**CLAUDE.md Slim-Down (676 → 347 lines, ~49% smaller)**
+
+Auto-loaded context reduced by ~12K tokens per session. All substantive rules and workflow steps preserved; only redundancy and prose bloat removed.
+
+- **Project Structure consolidation**
+  - Three full directory trees (Single / Multi-paper / Revision) collapsed into one base tree + concise diff notes for the Multi-paper and Revision variants
+- **File Roles table removed**
+  - 30-row table duplicated information already present in tree comments and workflow phases
+- **Quick Commands consolidation**
+  - Eight separate per-category tables merged into a single table with a Phase column
+- **Notes section trimmed**
+  - Removed redundant "PubMed Search Tool" subsection (covered in slash commands and `scripts/search_pubmed.py` docstring)
+  - Removed "Writing Style Priority" subsection (already in "Natural Academic Writing Style" section)
+  - Removed "Statistical Analysis Quick Workflow" + "Test Selection" table (covered in Phase 2 of workflow and `docs/statistical_analysis_guide.md`)
+- **Critical Rule 8 / Phase 3→4 consistency fix**
+  - `draft_plan.md` required-items count aligned: Rule 8 now explicitly states "1-8 필수, 9 선택" and the Phase 3→4 completion criterion matches (resolves prior 8 vs 9 mismatch)
 
 ### v0.6.0 (2026-04-18)
 
